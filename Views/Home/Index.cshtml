@@ -1,0 +1,25 @@
+﻿@* @{
+    ViewData["Title"] = "Home Page";
+} *@
+ @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Note.Models.Todo;
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+
+<div class="row">
+
+    <div class="col-sm-4">
+        <form  asp-controller="TodoList"  asp-action="Create" method="post">
+            <input  type="text" asp-for="todoName" placeholder="Todo Name">
+            <input  type="text" asp-for="todoText"  placeholder="Todo Text">
+            <button> Add Todo </button>
+        </form >
+
+    </div>
+    
+    <div class="col-sm-8">col-sm-8</div>
+
+</div>
